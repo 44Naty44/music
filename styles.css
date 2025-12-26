@@ -1,0 +1,239 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #333;
+    color: #fff;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/*barra de carpetas*/
+.nav-bar {
+    background: #111111;
+    height: 100%;
+    width: 15%;
+    outline: 3px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-bar div {
+    margin: 0.2rem;
+}
+.nav-bar div span {
+    background: #333;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.nav-bar span {
+    display: flex;
+    margin: 0.2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar input {
+    background: #333;
+    color: white;
+    border: none;
+    width: 90%;
+    border-radius: 0.2rem;
+}
+
+/*ajustes*/
+.settings-btn {
+    background: linear-gradient(45deg,#511db9, #c97816);
+    border-radius: 0.2rem;
+}
+
+.settings-btn:hover {
+    background: #666;
+}
+
+/*mini reproductor*/
+.reproductor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: #222;
+    height: 100%;
+    width: 30%;
+    outline: 3px solid #000;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background: linear-gradient(45deg,#511db9, #c97816);
+    width: 90%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.volume {
+    /* Quitamos el diseño nativo */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    width: 80%;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.tiempo {
+    color: #ddd;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttons button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 2px;
+}
+
+/*change file type*/
+.file-type {
+    background: #444;
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+}
+.file-type div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.file-type button {
+    background: #222;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 5px;
+    margin: 2px;
+    width: 100%;
+}
+
+/*video*/
+.video {
+    width: 90%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #000;
+    outline: 3px solid #111;
+}
+
+/*progress bar*/
+.progress {
+    background: #333;
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg,#511db9, #c97816);
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+}
+
+/*listas*/
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 5px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.lista .titulo {
+    background: linear-gradient(90deg,#511db9, #c97816);
+    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100000;
+}
+.lista .titulo input {
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    padding: 0.1rem;
+}
+.lista .titulo-text {
+    text-align: center;
+}
+
+.lista div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*canciones*/
+.new-cancion {
+    background: #222;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+.new-cancion:hover {
+    background: linear-gradient(90deg,#1db954, #1da1b9);
+}
+
+.selected {
+    background: linear-gradient(90deg,#511db9, #c97816);
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#511db9, #c97816);;
+}
+/*slider*/
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    
+    width: 18px;
+    height: 18px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    transition: 0.2s;
+}
+::-webkit-slider-thumb:hover {
+    background: #1ed760;
+    transform: scale(1.2);
+}

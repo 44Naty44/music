@@ -262,6 +262,13 @@ volumeBtn.addEventListener("input", (e) => {
     repType.volume = e.target.value;
 })
 
+repType.onerror = function() {
+    
+    if (audio.error.code === 4) {
+        nextSong(); 
+    }
+};
+
 repType.addEventListener("timeupdate", (e) => {
     if (!progressBar) return;
 
